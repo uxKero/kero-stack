@@ -43,7 +43,7 @@ Every entry starts the same way: decide in one sentence whether one agent does t
 
 ## Orchestrating
 
-Before splitting any work across agents, load `kero-orchestrate`. It decides whether delegating pays, writes the brief, isolates the work and reviews what comes back. One agent doing the work well is the default.
+Before splitting any work across agents, load `kero-orchestrate`. When [Orca](https://onorca.dev) is running, parallel work goes there, each agent in its own worktree. It decides whether delegating pays, writes the brief, isolates the work and reviews what comes back. One agent doing the work well is the default.
 
 ## Measuring
 

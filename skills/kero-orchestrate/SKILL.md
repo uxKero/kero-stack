@@ -48,7 +48,7 @@ Use what is installed and allowed; skip the rest without stopping. Before callin
 | Need | First choice | Optional |
 |:--|:--|:--|
 | Parallel research or code inside the session | Native sub agents: Claude Code (`.claude/agents/*.md`), Codex (`.codex/agents/*.toml`), Cursor (`.cursor/agents/*.md`) | |
-| Supervised multi agent runs, task graphs, decision gates | Orca, when installed: load `orca skills get orchestration` and follow it | |
+| Parallel workers, each in its own worktree, supervised from one place; task graphs, decision gates | Orca, the workspace this stack is built in. Check `orca status`; then load `orca skills get orchestration` for supervised runs, or `orca skills get orca-cli` to hand a task to an agent in its own worktree. Install the skills with `orca skills install --skill orchestration --skill orca-cli`. Without Orca, native sub agents with worktrees | |
 | Independent coding in its own worktree | | Cursor CLI: `cursor-agent -p --output-format json -w <name> "<brief>"`; Cursor cloud agents through its API for work that ends in a PR |
 | A second opinion or a different model on code | | `codex exec "<brief>" -C <dir> --json` (GPT-6 Astra and GPT-5.x where available); `grok -p "<brief>" --output-format json`; `gemini -p "<brief>" --output-format json` |
 | Images | | OpenAI Images API (`gpt-image-2.5-*`); Higgsfield CLI (`higgsfield generate create <model> --prompt ... --wait --json`, check `generate cost` first) |
